@@ -1,0 +1,80 @@
+deletes all the vowels,
+inserts a character "." before each consonant,
+replaces all uppercase consonants with corresponding lowercase ones.
+Vowels are letters "A", "O", "Y", "E", "U", "I", and the rest are consonants
+
+Input
+Codeforces
+output
+.c.d.f.r.c.s
+*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+string s,s2;
+cin>>s;
+int len=s.length();
+for(int i=0;i<len;i++){
+	if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='y'||s[i]=='A'||s[i]=='E'||s[i]=='O'||s[i]=='I'||s[i]=='U'||s[i]=='Y')
+		continue;
+	else
+	{
+		s2+='.';
+		s2+=towlower(s[i]);
+	}
+}
+cout<<s2;
+
+	return 0;
+}
+
+/*Methood 2
+
+ //#include <iostream>
+#include <string.h>
+#include<stdio.h>
+#include <conio.h>
+#include <cstring>
+//using namespace std;
+int vowelChk(char);
+int main(){
+   char s[50], t[50];
+   int c, d = 0;
+   scanf("%s",&s);
+ //  cout<<"Enter a string to delete vowels\n";
+   //cin>>s;
+  for(int i=0;i<=strlen(s);i++)
+  {
+  	if(s[i]>=65&&s[i]<=92)
+  	{
+  		s[i]=s[i]+32;
+	  }
+  }
+   
+   for(c = 0; s[c] != '\0'; c++) {
+      // check for If not a vowel
+      if(vowelChk(s[c]) == 0){
+         t[d] = s[c];
+         d++;
+      }
+   }
+   t[d] = '\0';
+   strcpy(s, t);
+
+printf(".%c",s[0]);
+        for (int i = 1; s[i]; i++) 
+   {
+   	printf(".%c",s[i]);
+   }
+   return 0;
+}
+inline int vowelChk(char ch){
+   if (ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'I' || ch =='o' || ch=='O' || ch == 'u' || ch == 'U'||ch=='y'||ch=='Y')
+      return 1;
+   else
+      return 0;
+}
+*/
