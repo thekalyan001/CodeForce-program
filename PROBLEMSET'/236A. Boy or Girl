@@ -1,0 +1,55 @@
+ if the number of distinct characters in one's user name is odd, then he is a male,
+ otherwise she is a female. You are given the string that denotes the user name, 
+ please help our hero to determine the gender of this user by his method.
+
+Input/*
+input
+wjmzbmr
+
+output
+CHAT WITH HER!
+----------------
+input
+xiaodao
+
+output
+IGNORE HIM!
+*/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	char str[100],test[100];
+	scanf("%s",str);
+	int j=0;
+	test[0]=str[0];
+	int count=1;
+	for(int i=1;str[i]!='\0';i++)
+	{
+		int k=0;
+		for(;k<=j;k++)
+		{
+			if(test[k]==str[i])
+			{
+				break;
+			}
+			else if(k==j)
+			{
+				j++;
+				test[j]=str[i];
+				count++;
+			}
+		}
+	}
+	
+	if(count%2==0)
+    {
+        cout<<"CHAT WITH HER!";
+    }
+    else
+    {
+        cout<<"IGNORE HIM!\n";
+    }
+    return 0;
+}
