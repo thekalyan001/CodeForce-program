@@ -1,0 +1,27 @@
+/*A. Bear and Big Brother
+
+Examples
+input
+4 7
+output
+2
+In the first sample, Limak weighs 4 and Bob weighs 7 initially. After one year their weights are 4·3 = 12 and 7·2 = 14 respectively
+(one weight is tripled while the other one is doubled). Limak isn't larger than Bob yet.
+After the second year weights are 36 and 28, so the first weight is greater than the second one.
+Limak became larger than Bob after two years so you should print 2.
+/*
+#include<iostream>
+using namespace std;
+int main()
+{
+long a,b,count=0;
+cin>>a>>b;
+while(a<=b)
+{
+	a=a*3;
+	b=b*2;
+	count++;
+}
+cout<<count;
+	return 0;
+}
