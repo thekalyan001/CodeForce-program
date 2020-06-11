@@ -1,2 +1,3 @@
 # CodeForce-program
-Here we will discuss the all types CodeForce program solutin in the easiest way
+Here i'll discuss the all kinds CodeForce program with solution in the easiest way
+So are you keen to learn :)
