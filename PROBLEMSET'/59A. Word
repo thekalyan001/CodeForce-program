@@ -1,0 +1,57 @@
+if small character less then greater character then make hole string into small and vice versa
+in case of eqality lower and upper character make whole string into lower
+
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+	string s;//char s[1000] but more space
+	int count1=0,count2=0;
+	cin>>s;
+for(int i=0;s[i]!='\0';i++)
+{
+if(s[i]>=97 && s[i]<=122)
+      {
+		count1++;//chotka
+      }
+else if (s[i] >= 'A' && s[i] <= 'Z') 
+{
+	count2++;//jhethka
+}
+}
+
+
+
+if(count1>count2)//chotka ke number jyada
+{
+for(int i=0;s[i]!='\0';i++)
+	{
+		if (s[i] >= 'A' && s[i] <= 'Z')    //checking for uppercase characters
+			s[i] = s[i] + 32;         //converting uppercase to lowercase
+	}
+}
+
+else if(count1<count2)//barka ke jyada no.
+{for(int i=0;s[i]!='\0';i++)
+{
+	if(s[i]>=97 && s[i]<=122)
+      {
+	s[i]=(s[i]-32);//convrert into upper
+      }
+}
+}
+else if(count1==count2)
+{
+for(int i=0;s[i]!='\0';i++)
+	{
+	if (s[i] >= 'A' && s[i] <= 'Z')    //checking for uppercase characters
+			s[i] = s[i] + 32;     
+	}
+}
+
+
+cout<<s;
+return 0;
+}
